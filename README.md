@@ -57,8 +57,8 @@ To produce the final `submission.json` for leaderboard submission:
 1. Open the `submission.json` generated from the **Phase 1 + Phase 2** inference process.
 2. Open the `submission.json` generated from the **Data Augmentation** inference process.
 3. Combine the following entries:
-   - Copy all `Test_general_*` entries from the **Data Augmentation** file.
-   - Copy all `Test_[regional|suggestion]_*` entries from the **Phase 1 + Phase 2** file.
+   - Copy all `Test_general_*` entries from the **Phase 1 + Phase 2** file.
+   - Copy all `Test_[regional|suggestion]_*` entries from the **Data Augmentation** file.
 4. Save the combined result as the final `submission.json`.
 
 # Usage
