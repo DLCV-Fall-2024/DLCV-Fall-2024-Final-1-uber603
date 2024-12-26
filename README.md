@@ -36,6 +36,11 @@ Notes:
 
 3. Run `src/inference.ipynb`. After a few hours, the inference result (`submission.json`) will be generated in the `src` directory.
 
+Notes:
+
+- To reproduce the leaderboard result, merge the `submission.json` generated here with another `submission.json` generated after completing `src/train-lora-augmented.ipynb`.
+- Specifically, you can simply copy-paste `Test_general_*` from the latter submission.json and `Test_[regional|suggestion]_*` from the former one.
+
 # Usage
 To start working on this final project, you should clone this repository into your local machine by the following command:
 ```
