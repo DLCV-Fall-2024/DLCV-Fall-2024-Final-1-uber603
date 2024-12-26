@@ -25,6 +25,8 @@ Notes:
 
 ### Inference
 
+#### Phase 1 + Phase 2
+
 1. Download the following weights and place them inside the `src/models` directory:
 
    ```bash
@@ -36,10 +38,28 @@ Notes:
 
 3. Run `src/inference.ipynb`. After a few hours, the inference result (`submission.json`) will be generated in the `src` directory.
 
-Notes:
+#### Data Augmentation
 
-- To reproduce the leaderboard result, merge the `submission.json` generated here with another `submission.json` generated after completing `src/train-lora-augmented.ipynb`.
-- Specifically, you can simply copy-paste `Test_general_*` from the latter submission.json and `Test_[regional|suggestion]_*` from the former one.
+1. Download the following weights and place them inside the `src/models` directory:
+
+   ```bash
+   gdown 10g8nWQbh7nRJo3sDaguW1QiGXMSDkciT
+   ```
+
+2. Unzip `lora_r64_5e-5_augmented_ep1.zip`.
+
+3. Run `src/inference-augmented.ipynb`. After a few hours, the inference result (`submission.json`) will be generated in the `src` directory.
+
+#### Merge `submission.json`
+
+To produce the final `submission.json` for leaderboard submission:
+
+1. Open the `submission.json` generated from the **Phase 1 + Phase 2** inference process.
+2. Open the `submission.json` generated from the **Data Augmentation** inference process.
+3. Combine the following entries:
+   - Copy all `Test_general_*` entries from the **Data Augmentation** file.
+   - Copy all `Test_[regional|suggestion]_*` entries from the **Phase 1 + Phase 2** file.
+4. Save the combined result as the final `submission.json`.
 
 # Usage
 To start working on this final project, you should clone this repository into your local machine by the following command:
